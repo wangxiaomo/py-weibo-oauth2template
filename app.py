@@ -42,7 +42,7 @@ def index():
         client.set_access_token(access_token, expires_in)
         # 判断有效期
         if client.is_expires() == True:
-            raise Exception("Expires!")
+            return "access token expired!"
         html = ''
         html = html + "<p>Welcome User %s         <a href=\"logout\">Logout</a></p>" % request.cookies.get('screen_name')
         timeline = client.get.statuses__user_timeline()
