@@ -22,3 +22,7 @@ INSTALL:
         修改 CALLBACK_URL
         修改 app.secret_key(可选)
 
+
+ABOUT THE WEIBO SDK:
+    HOME PAGE: http://code.google.com/p/sinaweibopy/
+    MANUAL   : http://code.google.com/p/sinaweibopy/wiki/OAuth2
