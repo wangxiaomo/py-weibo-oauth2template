@@ -1,10 +1,14 @@
 #-*- coding: utf-8 -*-
 
+""" APP NAME: Python Weibo OAuth2 Template """
+""" Author  : xiaomo(wxm4ever@gmail.com)   """
+""" Fork    : https://github.com/wangxiaomo/py-weibo-oauth2template/fork_select """
 
 
-""" CONFIG OF THE APP TOKEN """
-APP_KEY    = '2986120742'
-APP_SECRET = '796b90d5a6e3a1cc4d719726f5f99f7d'
+""" CONFIG OF THE APP TOKEN AND CALLBACK_URL """
+APP_KEY      = 'APP_KEY'
+APP_SECRET   = 'APP_SECRET'
+CALLBACK_URL = 'CALLBACK_URL'
 
 
 from flask import Flask, g, request, redirect, make_response
@@ -17,10 +21,10 @@ try:
 except ImportError:
     import simplejson as json
 from weibo import APIClient
-CALLBACK_URL = "http://2.irestful.sinaapp.com/callback"
 
 
 def get_api_client():
+    """ 返回 API Client """
     return APIClient(app_key=APP_KEY, app_secret=APP_SECRET, redirect_uri=CALLBACK_URL)
 
 @app.route("/")
@@ -53,7 +57,6 @@ def callback():
         client = get_api_client()
         r = client.request_access_token(code)
         client.set_access_token(r.access_token, r.expires_in)
-        # get user info
         userid=client.get.account__get_uid()
         user=client.get.users__show(uid=userid.uid)
         

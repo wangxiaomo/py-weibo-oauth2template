@@ -1,0 +1,24 @@
+Python SAE Weibo OAuth2 Template.
+        Author: xiaomo(wxm4ever@gmail.com)
+        GitHub: https://github.com/wangxiaomo/py-weibo-oauth2template
+        Fork  : https://github.com/wangxiaomo/py-weibo-oauth2template/fork_select
+.
+├── app.py                 # 应用程序
+├── config.yaml            # 配置文件
+├── index.wsgi             # 启动文件
+├── README                 # 文档
+└── weibo.py               # weibo python sdk(oauth2)
+
+0 directories, 5 files
+
+
+INSTALL:
+    1.新建 SAE Python 应用.
+    2.修改 config.yaml:
+        name:    应用名
+        version: 应用版本
+    3.修改 app.py:
+        修改 APP_KEY,APP_SECRET
+        修改 CALLBACK_URL
+        修改 app.secret_key(可选)
+

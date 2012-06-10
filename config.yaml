@@ -1,4 +1,12 @@
+##########################################################
+#
+#
+# APP NAME: Python Weibo OAuth2 Template
+# VERSION : 1.0
+#
+##########################################################
+
 ---
-name: irestful
-version: 2
+name: APP_NAME            # 应用名称
+version: APP_VERSION      # 应用版本号
 ...
